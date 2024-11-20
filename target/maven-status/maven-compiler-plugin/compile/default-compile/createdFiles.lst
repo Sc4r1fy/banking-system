@@ -1,0 +1,9 @@
+com\redlink\app\entity\User.class
+com\redlink\app\BankingSystem.class
+com\redlink\app\entity\Account.class
+com\redlink\app\entity\BankTransferTransaction.class
+com\redlink\app\entity\PaymentTransaction.class
+com\redlink\app\entity\P2PTransferTransaction.class
+com\redlink\app\model\TransactionType.class
+com\redlink\app\model\Currency.class
+com\redlink\app\entity\Transaction.class
