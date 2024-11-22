@@ -15,6 +15,9 @@ Mejoras que no llegué a implementar porque me quedé corto de tiempo:
 - Me faltó mejor manejo de excepciones en la capa de servicio y además me hubiera gustado implementar logging, ya sea con log4j o parecidos para facilitar el tracing.
 # Banking-System / challenge técnico
 
+La idea básica de la API es que en principio un usuario del sistema puede tener una o más cuentas bancarias asociadas a alguna divisa, luego , una usuario puede solicitar una transaccion desde alguna de sus
+cuentas en la divisa correspondiente.
+
 
 Pasos para correr la aplicación. 
 
