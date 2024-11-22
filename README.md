@@ -113,7 +113,7 @@ Pasos para correr la aplicación.
     "cardId": "43211234",
     "amount": 100.0,
     "currency": "USD",
-    "status": "COMPLETED",
+    "status": "PENDING",
     "account": {
         "id": 1  // el id tiene que ser de una cuenta existente
     },
