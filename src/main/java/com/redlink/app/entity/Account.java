@@ -1,5 +1,6 @@
 package com.redlink.app.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import com.redlink.app.model.Currency;
@@ -7,6 +8,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.List;
 
@@ -25,7 +27,7 @@ public class Account {
     private Currency currency;
 
     @Column(name = "balance", nullable = false)
-    private Double balance;
+    private BigDecimal balance;
 
     @Column(name = "update_date")
     @UpdateTimestamp
@@ -37,9 +39,11 @@ public class Account {
 
     @ManyToOne(targetEntity = User.class, optional = false)
     @JoinColumn(name = "user_id", nullable = false)
+    @JsonIgnoreProperties({"accounts"})
     private User user;
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnoreProperties("account")
     private List<Transaction> transactionList;
 
 }

@@ -1,5 +1,6 @@
 package com.redlink.app.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -40,6 +41,7 @@ public class User {
     private Date updateDate;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnoreProperties({"user"})
     private List<Account> accounts;
 
 

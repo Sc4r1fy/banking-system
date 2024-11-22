@@ -1,9 +1,14 @@
 package com.redlink.app.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
+@Getter
+@Setter
 @Entity
 @DiscriminatorValue("P2P_TRANSFER")
 public class P2PTransferTransaction extends Transaction {
